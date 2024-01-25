@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function rgblind_schema() {
+  $schema['rgblind'] = [
+    'description' => 'User level settings for RGBlind',
+    'fields' => [
+      'uid' => [
+        'description' => 'The {users}.uid this record affects.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'value' => [
+        'description' => 'Active value.',
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => [
+      'uid',
+    ],
+  ];
+  // Return the schema.
+  return $schema;
+}

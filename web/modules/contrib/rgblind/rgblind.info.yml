@@ -1,0 +1,8 @@
+name: RGBlind
+description: Integrates RGBlind Colourblindness Simulation.
+package: Accessibility Tools
+type: module
+version: '1.0'
+core_version_requirement: ">=9"
+libraries:
+  - rgblind/rgblind.links

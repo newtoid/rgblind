@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Provides simulations of colourblindness to test page variation.
+ */
+
+/**
+ * Checks permissions
+ *
+ * @param array $page
+ *
+ * @return void
+ */
+function rgblind_page_attachments(array &$page) {
+  if (!\Drupal::currentUser()->hasPermission('administer rgblind')) {
+    return;
+  }
+  $page['#attached']['library'][] = 'rgblind/rgblind.links';
+}
+
+/**
+ * Get current rgblind setting from config
+ * TODO: remove message output
+ * @param $variables
+ */
+function rgblind_preprocess_page(&$variables) {
+  $config = \Drupal::config('rgblind.settings');
+  \Drupal::messenger()->addStatus($config->get('rgbclass'));
+}
+/**
+ * Implements hook_preprocess_html to vary body class
+ * @param $variables
+ */
+function rgblind_preprocess_html(&$variables) {
+  $rgbtype = \Drupal::config('rgblind.settings');
+  $rgbtype->get('rgbclass');
+  $node = \Drupal::routeMatch()->getParameter('node');
+  switch ($rgbtype) {
+    case 0:
+      $variables['attributes']['class'][] = 'default';
+      break;
+    case 1:
+      $variables['attributes']['class'][] = 'protanopia';
+      break;
+    case 2:
+      $variables['attributes']['class'][] = 'deuteranopia';
+      break;
+  }
+}

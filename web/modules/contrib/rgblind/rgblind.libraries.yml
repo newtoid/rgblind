@@ -1,0 +1,11 @@
+rgblind.links:
+  version: VERSION
+  header: true
+  js:
+      js/rgblind.js: {weight: -10 }
+  dependencies:
+    - core/jquery
+  css:
+    base:
+      css/rgblind.css: {}
+      css/rgblind-inject.css: { }

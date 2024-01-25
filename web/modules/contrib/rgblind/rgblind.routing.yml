@@ -1,0 +1,7 @@
+rgb.content:
+  path: '/rgb'
+  defaults:
+    _form: \Drupal\rgblind\Form\RGBSettingsForm
+    _title: 'RGB Colourblindness Simulation Options'
+  requirements:
+    _permission: 'administer rgblind'

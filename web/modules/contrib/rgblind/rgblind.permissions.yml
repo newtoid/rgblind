@@ -1,0 +1,3 @@
+administer rgblind:
+  title: 'Administer RGBlind'
+  description: 'Allows a user to select class for different types of colourblindness simulation.'

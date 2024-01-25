@@ -1,0 +1,6 @@
+rgblind.admin:
+  title: 'RGBlind settings'
+  description: 'Configure the RGBlind Simulation'
+  parent: system.admin_config_development
+  route_name: rgb.content
+  weight: 100

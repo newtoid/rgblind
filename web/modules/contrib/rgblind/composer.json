@@ -1,0 +1,29 @@
+{
+    "name": "vendor_name/rgblind",
+    "description": "description",
+    "minimum-stability": "stable",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "newtoid",
+            "email": "david@newtonmail.net"
+        }
+    ],
+    "repositories": [
+        {    "type": "package",
+            "package": {
+                "name": "interaktivarum/rgblind",
+                "version": "1.0",
+                "type": "VCS",
+                "source": {
+                    "url": "https://github.com/interaktivarum/rgblind.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "interaktivarum/rgblind": "^1.0"
+    }
+}

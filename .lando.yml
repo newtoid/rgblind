@@ -1,0 +1,4 @@
+name: cbt
+recipe: drupal10
+config:
+  webroot: web

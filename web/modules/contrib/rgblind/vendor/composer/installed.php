@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'vendor_name/rgblind',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '12b6ec814f905f948d0af08e2c973b547f9eb1a4',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'components/jquery' => array(
+            'pretty_version' => 'v3.7.1',
+            'version' => '3.7.1.0',
+            'reference' => '8edc7785239bb8c2ad2b83302b856a1d61de60e7',
+            'type' => 'component',
+            'install_path' => __DIR__ . '/../components/jquery',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'interaktivarum/rgblind' => array(
+            'pretty_version' => '1.0',
+            'version' => '1.0.0.0',
+            'reference' => 'master',
+            'type' => 'vcs',
+            'install_path' => __DIR__ . '/../interaktivarum/rgblind',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'vendor_name/rgblind' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '12b6ec814f905f948d0af08e2c973b547f9eb1a4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
